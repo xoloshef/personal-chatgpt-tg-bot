@@ -85,7 +85,6 @@ def main():
     plugin_config = {
         'plugins': os.environ.get('PLUGINS', '').split(',')
     }
-
     plugin_manager = PluginManager(config=plugin_config)
     openai_helper = OpenAIHelper(config=openai_config, plugin_manager=plugin_manager)
     telegram_bot = ChatGPTTelegramBot(config=telegram_config, openai=openai_helper)
